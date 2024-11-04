@@ -288,7 +288,7 @@ img {
   margin-top: 60px;
 }
 .sum-work .work-card.card-1 {
-  background-image: url("/assets/images/Projet-8.PNG");
+  background-image: url("../assets/images/Projet-8.PNG");
 }
 .sum-work .work-card.card-2 {
   background-image: url("../assets/images/Projet-1.png");
