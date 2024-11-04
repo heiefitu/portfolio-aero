@@ -510,7 +510,7 @@ img {
 }
 /* Example background images */
 .work-cards .work-card.card-1 {
-  background-image: url("../assets/images/Projet-1.PNG");
+  background-image: url("../assets/images/Projet-1.png");
 }
 .work-cards .work-card.card-2 {
   background-image: url("../assets/images/Projet-2.png");
@@ -519,7 +519,7 @@ img {
   background-image: url("../assets/images/Projet-3.png");
 }
 .work-cards .work-card.card-4 {
-  background-image: url("../assets/images/Projet-4.png");
+  background-image: url("../assets/images/Projet-4.PNG");
 }
 .work-cards .work-card.card-5 {
   background-image: url("../assets/images/Projet-5.jpg");
@@ -531,7 +531,7 @@ img {
   background-image: url("../assets/images/Projet-7.png");
 }
 .work-cards .work-card.card-8 {
-  background-image: url("../assets/images/Projet-8.png");
+  background-image: url("../assets/images/Projet-8.PNG");
 }
 
 /* #################################################################################### */
