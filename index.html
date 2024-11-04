@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heiefitu Taiaapu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo on the far left -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/white-logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <!-- Main menu centered -->
+        <div class="main-menu text-md-btn">
+          <ul>
+            <li>
+              <a href="#" class="active" onclick="showPage('home')">Home</a>
+            </li>
+            <li>
+              <a href="#" onclick="showPage('work')">Work</a>
+            </li>
+            <li>
+              <a href="#" onclick="showPage('about')">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact icons on the far right -->
+        <div class="link-icon-tab">
+          <ul>
+            <li>
+              <!-- LinkedIn icon -->
+              <a
+                class="link-icon"
+                href="https://www.linkedin.com/in/heiefitu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <!-- Email icon -->
+              <a
+                class="link-icon"
+                href="mailto:taiaapu.heiefitu@gmail.com"
+                aria-label="Email us"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <!-- Phone icon -->
+              <a
+                class="link-icon"
+                href="tel:+33603268070"
+                onclick="showPhoneNumber(event)"
+              >
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hamburger button for mobile -->
+        <button class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="#" class="active" onclick="showPage('home')">Home</a>
+            </li>
+            <li>
+              <a href="#" onclick="showPage('work')">Work</a>
+            </li>
+            <li>
+              <a href="#" onclick="showPage('about')">About</a>
+            </li>
+            <li>
+              <!-- LinkedIn icon -->
+              <a
+                class="link-icon"
+                href="https://www.linkedin.com/in/heiefitu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <!-- Email icon -->
+              <a
+                class="link-icon"
+                href="mailto:taiaapu.heiefitu@gmail.com"
+                aria-label="Email us"
+              >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <!-- Phone icon -->
+              <a
+                class="link-icon"
+                href="tel:+33603268070"
+                onclick="showPhoneNumber(event)"
+              >
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ############################# Home section ########################################  -->
+    <section id="home" class="home section active-section">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-heading text-xxl">Hi, I'm Heiefitu Taiaapu</h1>
+            <h2 class="hero-subheading text-xl">
+              Aerospace Engineering Student
+            </h2>
+            <p class="hero-text text-md">
+              As a final-year aerospace engineering student specializing in
+              missile and space systems, I apply practical skills in 3D
+              modeling, computational fluid dynamics, and finite element
+              analysis to develop real-world aerospace solutions.
+            </p>
+            <p class="hero-text text-md">
+              Explore my projects, and let’s discover the potential for future
+              collaboration.
+            </p>
+            <h6 class="address">Bordeaux, France</h6>
+            <div class="hero-buttons">
+              <a href="assets/CV_ENG_TAIAAPU-HEIEFITU.pdf" download class="btn"
+                >My Resume</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- My Services section -->
+      <section class="my-services">
+        <div class="container">
+          <!-- My Services 3 grid services -->
+          <div class="my-services-row-2">
+            <div class="my-services-grid">
+              <div class="card">
+                <div class="service-icon">
+                  <img src="assets/images/11.png" alt="CAD-Icon" />
+                </div>
+                <h3 class="text-icon">3D Part Design (CAD)</h3>
+                <p class="text-md">
+                  I utilize CAD software like CATIA 3DExperience and Fusion 360,
+                  to turn sketches and ideas into detailed designs ready for
+                  testing and implementation. My experience includes modeling
+                  missile systems (SCALP-EG and Meteor for MBDA).
+                </p>
+                <div class="tags">
+                  <span class="tag">Assembly</span>
+                  <span class="tag">Part Design</span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="service-icon">
+                  <img src="assets/images/22.png" alt="FEM-Icon" />
+                </div>
+                <h3 class="text-icon">Finite Element Analysis (FEA)</h3>
+                <p class="text-md">
+                  I perform comprehensive Finite Element Analysis using tools
+                  like ANSYS Workbench, Abaqus and 3DExperience to ensure
+                  designs can withstand real-world conditions. By simulating
+                  stresses, strains, and thermal effects, I identify potential
+                  issues and optimize designs for safety and performance.
+                </p>
+                <div class="tags">
+                  <span class="tag">Stress Analysis</span>
+                  <span class="tag">Optimization</span>
+                </div>
+              </div>
+              <div class="card">
+                <div class="service-icon">
+                  <img src="assets/images/33.png" alt="CFD-Icon" />
+                </div>
+                <h3 class="text-icon">Computational Fluid Dynamics (CFD)</h3>
+                <p class="text-md">
+                  I analyze and predict the fluid flow and aerodynamic
+                  performance of aerospace components using ANSYS Fluent and
+                  MATLAB. By conducting detailed CFD simulations, I provide
+                  insights that lead to enhanced performance and efficiency.
+                </p>
+                <div class="tags">
+                  <span class="tag">Aerodynamics</span>
+                  <span class="tag">Flow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- My Services Software expertise -->
+          <div class="my-services-row-3">
+            <div class="card expertise-grid">
+              <h4 class="text-italic-md">Software Expertise</h4>
+              <div class="software-icons">
+                <!-- Add the icons of the software -->
+                <img src="assets/images/catia-icon.png" alt="CATIA" />
+                <img src="assets/images/ansys-icon-2.png" alt="ANSYS" />
+                <img src="assets/images/abaqus-icon.png" alt="Simulia" />
+                <img src="assets/images/matlab-icon-2.png" alt="MATLAB" />
+                <img
+                  src="assets/images/fusion360-icon-2.png"
+                  alt="Fusion 360"
+                />
+                <img src="assets/images/stk-icon-2.png" alt="STK" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- My Work section -->
+      <section id="sum-work" class="sum-work">
+        <div class="container">
+          <div class="sum-work-header">
+            <div class="sum-header-text">
+              <h3 class="text-xxl">Quick View</h3>
+              <h4 class="text-md">
+                Take a look below at some of my featured work.
+              </h4>
+            </div>
+            <div class="sum-work-button">
+              <a href="#" class="btn btn-special" onclick="showPage('work')"
+                >View All <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="sum-work-body">
+            <div class="sum-work-cards">
+              <!-- Card 1 -->
+              <a href="project01.html?project=8">
+                <div class="work-card card-1">
+                  <div class="work-card-title text-lg">Space Communication</div>
+                </div>
+              </a>
+              <!-- Card 2 -->
+              <a href="project01.html?project=1">
+                <div class="work-card card-2">
+                  <div class="work-card-title text-lg">3D Designing</div>
+                </div>
+              </a>
+              <!-- Card 3 -->
+              <a href="project01.html?project=2">
+                <div class="work-card card-3">
+                  <div class="work-card-title text-lg">
+                    Aerodynamics Analysis
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- ############################# About Section ######################################## -->
+    <section id="about" class="about-section section">
+      <section class="about-intro">
+        <div class="container">
+          <!-- Intro and Summary -->
+          <div class="about-intro-content">
+            <h2 class="section-title">About Me</h2>
+            <h6 class="location">Bordeaux, France</h6>
+            <p class="text-md">
+              As a final-year aerospace engineering student at ELISA Aerospace,
+              I am specializing in
+              <strong class="bold-text"
+                >missile engineering, space systems, and propulsion</strong
+              >. My academic journey has equipped me with a robust foundation in
+              various areas of aerospace technology. I am proficient in
+              <strong class="bold-text">computer-aided design (CAD)</strong>,
+              utilizing industry-standard software such as
+              <strong class="software-text">Autodesk Fusion 360</strong> and
+              <strong class="software-text">3DExperience CATIA</strong>.
+              Additionally, using
+              <strong class="software-text">ANSYS Workbench</strong> and
+              <strong class="software-text">Abaqus</strong>, I have refined my
+              abilities in
+              <strong class="bold-text">finite element analysis (FEA)</strong>
+              and
+              <strong class="bold-text"
+                >computational fluid dynamics (CFD)</strong
+              >. My academic knowledge and real-world experience put me in a
+              strong position for a successful career in the aerospace sector.
+            </p>
+            <p class="text-md">
+              I aim to contribute to projects focused on propulsion, risk
+              management, and the certification of high-performance aerospace
+              components.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="about-education">
+        <div class="container">
+          <div class="about-line"></div>
+          <h3 class="education-title">Education</h3>
+          <div class="container-sm">
+            <!-- Education -->
+            <div class="education-content">
+              <ul class="education-list">
+                <li>
+                  <div class="about-header">
+                    <h4>Aerospace Engineering Degree</h4>
+                    <p class="text-italic-md">Graduating in 2025</p>
+                  </div>
+                  <h5>ELISA Aerospace</h5>
+                  <div class="courses">
+                    <ul class="courses-list">
+                      <li class="text-md-2">Launchers and Satellites Sizing</li>
+                      <li class="text-md-2">Missiles Engineering</li>
+                      <li class="text-md-2">Space Mechanics</li>
+                      <li class="text-md-2">Space Propulsion</li>
+                      <li class="text-md-2">Satellites Communications</li>
+                      <li class="text-md-2">Hypersonic Aerodynamics</li>
+                      <li class="text-md-2">Compressible Aerodynamics</li>
+                      <li class="text-md-2">Composites Materials</li>
+                      <li class="text-md-2">Signal Processing</li>
+                      <li class="text-md-2">Linear Systems</li>
+                      <li class="text-md-2">Fluid Mechanics</li>
+                      <li class="text-md-2">Thermodynamics</li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="about-header">
+                    <h4>High School Diploma</h4>
+                    <p class="text-italic-md">Graduated in 2020</p>
+                  </div>
+                  <h5>Diadem High School</h5>
+                  <div class="courses-2">
+                    <p class="text-md-2">Graduated with Honours</p>
+                    <p class="text-md-2">Specialized in Earth Sciences</p>
+                  </div>
+                </li>
+                <!-- Second education item to be completed by user -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-experience">
+        <div class="container">
+          <div class="about-line"></div>
+          <h3>Work Experience</h3>
+          <!-- Work Experience -->
+
+          <div class="work-experience-content container-sm">
+            <ul class="experience-list">
+              <li>
+                <div class="about-header">
+                  <h4>Flight & Security Engineer Intern</h4>
+                  <p class="text-italic-md">Aug. 2023 - Nov. 2023</p>
+                </div>
+                <h5>Air Tahiti</h5>
+                <div class="tasks">
+                  <ul class="tasks-list">
+                    <li class="text-md-2">
+                      Analysis and classification of operational incidents
+                      through structured report assessments (CRS and CRV) to
+                      determine associated risk levels based on probability and
+                      severity.
+                    </li>
+                    <li class="text-md-2">
+                      Researched and benchmarked risk management practices
+                      across airline companies, focusing on quantifiable metrics
+                      to refine internal processes.
+                    </li>
+                    <li class="text-md-2">
+                      Applied risk assessment methodology to evaluate incidents.
+                    </li>
+                    <li class="text-md-2">
+                      Developed a custom VBA tool in Excel to assess barrier
+                      effectiveness in risk mitigation, creating a database for
+                      tracking and calculating the frequency of effective
+                      barriers over defined periods.
+                    </li>
+                    <li class="text-md-2">
+                      Visualized risk barriers in bowtie diagrams to provide
+                      actionable insights and enhance understanding of risk
+                      control measures during incident reviews.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="about-header">
+                  <h4>Airport Operator Intern</h4>
+                  <p class="text-italic-md">July 2021</p>
+                </div>
+                <h5>Civil Authority Aviation of French Polynesia</h5>
+                <div class="tasks">
+                  <ul class="tasks-list">
+                    <li class="text-md-2">
+                      Gained comprehensive knowledge of the air operator role by
+                      evaluating field incidents and recommending corrective
+                      actions tailored for optimal relevance and effectiveness.
+                    </li>
+                    <li class="text-md-2">
+                      Drafted 12 experience reports (RETEX) to document key
+                      lessons learned from incidents, capturing both positive
+                      and negative aspects to guide future operational
+                      improvements.
+                    </li>
+                    <li class="text-md-2">
+                      Documented both positive and negative aspects of incident
+                      responses, ensuring practical takeaways for future
+                      operations and preventing recurrence of similar incidents.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="about-skills">
+        <!-- Key Skills -->
+        <div class="skills-section container">
+          <div class="about-line"></div>
+          <h3>Hard Skills</h3>
+          <div class="hard-skills container-sm">
+            <div class="skills-row text-md-2">
+              <a href="project01.html?project=4" class="skill-item"
+                >3DExperience CATIA</a
+              >
+              <a href="project01.html?project=1" class="skill-item"
+                >Autodesk Fusion 360</a
+              >
+              <a href="project01.html?project=2" class="skill-item"
+                >ANSYS Workbench</a
+              >
+              <p class="skill-item-2">Abaqus SIMULIA</p>
+              <a href="project01.html?project=3" class="skill-item"
+                >MATLAB & Simulink</a
+              >
+              <a href="project01.html?project=8" class="skill-item">STK</a>
+            </div>
+            <div class="about-line-2"></div>
+            <!-- Programming Languages -->
+            <div class="skills-row text-md-2">
+              <a href="project01.html?project=5" class="skill-item">Python</a>
+              <p class="skill-item-2">C++</p>
+              <a href="" class="skill-item">MATLAB</a>
+              <a href="project01.html?project=6" class="skill-item">VBA</a>
+              <p class="skill-item-2">AppleScript</p>
+              <p class="skill-item-2">HTML</p>
+              <p class="skill-item-2">CSS</p>
+              <p class="skill-item-2">Java Script</p>
+            </div>
+            <div class="about-line-2"></div>
+            <!-- Additional Hard Skills -->
+            <div class="skills-row text-md-2">
+              <a href="project01.html?project=1" class="skill-item"
+                >Designing</a
+              >
+              <a href="project01.html?project=4" class="skill-item"
+                >Stress Analysis</a
+              >
+              <a href="project01.html?project=2" class="skill-item"
+                >Aerodynamics Simulation</a
+              >
+              <a href="project01.html?project=4" class="skill-item"
+                >Finite Elements Analysis</a
+              >
+              <a href="project01.html?project=4" class="skill-item"
+                >Optimization</a
+              >
+              <a href="project01.html?project=3" class="skill-item">Guidance</a>
+            </div>
+          </div>
+          <h3>Soft Skills</h3>
+          <div class="soft-skills container-sm">
+            <ul class="skills-row text-md-2">
+              <li class="skill-item-2">Autonomous</li>
+              <li class="skill-item-2">Analytical Thinking</li>
+              <li class="skill-item-2">Adaptability</li>
+              <li class="skill-item-2">Problem-Solving</li>
+              <li class="skill-item-2">Creative</li>
+              <li class="skill-item-2">Motivated</li>
+              <li class="skill-item-2">Curious</li>
+            </ul>
+          </div>
+          <h3>Languages</h3>
+          <div class="languages container-sm">
+            <div class="skills-row text-md-2">
+              <a
+                href="https://mon.certificat-voltaire.fr/verification-certificat?code=34KVCXW"
+                class="skill-item"
+                target="_blank"
+                >French (native)</a
+              >
+              <a
+                href="https://www.etsglobal.org/fr/en/digital-score-report/A5028F2AD52E24CCA221914844E6F50F9BB45F73169D6A205C5603D4A99FC4DFV1cvRVJsekF0UnBCUG8wYTlUSXJ1NWFVQWVCeXhjeWdUNG41SDlKNENwMWc2MVdG"
+                class="skill-item"
+                target="_blank"
+                >English (C1)</a
+              >
+              <p class="skill-item-2">Spanish (beginner)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-certifs">
+        <!-- Certifications -->
+        <div class="certifications container">
+          <div class="about-line"></div>
+          <h3>Certifications</h3>
+          <ul class="certif-list">
+            <li class="container-sm">
+              <div class="about-header">
+                <h4>Machine Learning with Matlab</h4>
+                <a
+                  class="certifs-links"
+                  href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=c57bdc3c-267a-4068-b432-99667032e0cb&"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view certificate <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <h5>MathWorks</h5>
+            </li>
+            <li class="container-sm">
+              <div class="about-header">
+                <h4>Deep Learning Onramp</h4>
+                <a
+                  class="certifs-links"
+                  href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0540e256-94cd-4780-93da-06e7255d4046&"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view certificate <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <h5>MathWorks</h5>
+            </li>
+            <li class="container-sm">
+              <div class="about-header">
+                <h4>Computer Vision Onramp</h4>
+                <a
+                  class="certifs-links"
+                  href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=9cda0cd4-9a87-43f9-9b25-1cb246700cd0&"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view certificate <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <h5>MathWorks</h5>
+            </li>
+            <li class="container-sm">
+              <div class="about-header">
+                <h4>Image Processing Onramp</h4>
+                <a
+                  class="certifs-links"
+                  href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=462ed4e6-a986-4a5b-9d3e-ebb63d63e65a&"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view certificate <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <h5>MathWorks</h5>
+            </li>
+            <li class="container-sm">
+              <div class="about-header">
+                <h4>Simulink Onramp</h4>
+                <a
+                  class="certifs-links"
+                  href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=f1663a02-2091-4612-bf08-439d0dd27c08&"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  view certificate <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <h5>MathWorks</h5>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    <!-- ############################# Work Section ######################################## -->
+    <section id="work" class="work-section section">
+      <!-- My Work section -->
+      <section class="work-hero">
+        <div class="container">
+          <div class="work-header">
+            <div class="work-header-text">
+              <h3 class="text-xxl">A Glimpse into My Work</h3>
+              <h4 class="text-md">Browse, get inspired, and let’s connect!</h4>
+              <p>
+                Here, you’ll find projects that showcase my
+                <strong class="bold-text">hands-on experience</strong>,
+                <strong class="bold-text">analytical skills</strong>, and
+                passion for <strong class="software-text">engineering</strong>.
+                This section offers a glimpse into the projects that have
+                defined my journey so far, each piece illustrating a unique
+                <strong class="bold-text">challenge</strong>, my
+                <strong class="bold-text">approach</strong>, and the
+                <strong class="bold-text">results achieved</strong>. From
+                coursework to professional experiences, I’ve gathered practical
+                insights that I continue to build upon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work-body-section">
+        <div class="work-body container">
+          <div class="work-cards">
+            <!-- Row 1 -->
+            <a href="project01.html?project=1">
+              <div class="work-card card-1">
+                <div class="work-card-title text-lg">3D Designing</div>
+              </div>
+            </a>
+            <a href="project01.html?project=2">
+              <div class="work-card card-2">
+                <div class="work-card-title text-lg">
+                  Aerodynamics Simulation
+                </div>
+              </div>
+            </a>
+            <!-- Row 2 -->
+            <a href="project01.html?project=3">
+              <div class="work-card card-3">
+                <div class="work-card-title text-lg">Auto-Pilot</div>
+              </div>
+            </a>
+            <a href="project01.html?project=4">
+              <div class="work-card card-4">
+                <div class="work-card-title text-lg">Optimization</div>
+              </div>
+            </a>
+            <!-- Row 3 -->
+            <a href="project01.html?project=5">
+              <div class="work-card card-5">
+                <div class="work-card-title text-lg">
+                  Reinforcement Learning
+                </div>
+              </div>
+            </a>
+            <a href="project01.html?project=6">
+              <div class="work-card card-6">
+                <div class="work-card-title text-lg">Risk Management Tool</div>
+              </div>
+            </a>
+            <!-- Row 4 -->
+            <a href="project01.html?project=7">
+              <div class="work-card card-7">
+                <div class="work-card-title text-lg">Thermal Transfer</div>
+              </div>
+            </a>
+            <a href="project01.html?project=8">
+              <div class="work-card card-8">
+                <div class="work-card-title text-lg">Space Communication</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Ligne horizontale -->
+        <div class="footer-line"></div>
+
+        <!-- Texte du footer et icônes -->
+        <div class="footer-grid">
+          <h4 class="footer-text">Want to get in touch?</h4>
+          <p class="text-md">
+            I'm here to help. Feel free to reach out through the links below.
+          </p>
+          <!-- Contact icons on the far right -->
+          <div class="link-icon-tab">
+            <ul>
+              <!--<li>
+                <a class="link-icon" href="contact.html">
+                  <i class="fa-solid fa-comment-dots"></i>
+                </a>
+              </li>//-->
+              <li>
+                <!-- LinkedIn icon -->
+                <a
+                  class="link-icon"
+                  href="https://www.linkedin.com/in/heiefitu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <!-- Email icon -->
+                <a
+                  class="link-icon"
+                  href="mailto:taiaapu.heiefitu@gmail.com"
+                  aria-label="Email us"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </li>
+              <li>
+                <!-- Phone icon -->
+                <a
+                  class="link-icon"
+                  href="tel:+33603268070"
+                  onclick="showPhoneNumber(event)"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer-copyright">
+            © 2024 Heiefitu Taiaapu. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

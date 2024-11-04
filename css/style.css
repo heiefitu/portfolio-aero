@@ -1,0 +1,1003 @@
+/*RESET*/
+* {
+  box-sizing: border-box; /* quand on ajoute des marges ca change pas, a faire tjrs*/
+  margin: 0; /* pour start avec 0 marges*/
+  padding: 0;
+}
+:root {
+  --primary-color: #176087;
+
+  --dark-color: #1a1a1a;
+  --black-color: #000;
+  --not-so-black-color: #0c0c0c;
+  --dark-gray-color: #1f1f1f;
+  --very-dark-gray-color: #151515;
+  /*--less-dark-color: #2c2c2c;*/
+  --less-dark-color: rgb(44, 44, 44, 0.5);
+  --less-dark-color-2: rgb(6, 7, 5, 0.4);
+
+  --border-color: #232323;
+  --border-color-2: #5e5e5e;
+  --border-color-3: rgb(94, 94, 94, 0.2);
+
+  --bg-couleur-1: #343d44;
+  --bg-couleur-2: #334c5f;
+  --light-color: #e0e7f5;
+
+  --font-light: #f6f6f6;
+  --font-couleur-1: #d7d7f2;
+  --font-couleur-2: #9292f3;
+  --font-couleur-3: #5959cb;
+  --font-couleur-4: #c0c0d5;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  background-color: var(
+    --dark-gray-color
+  ); /* Changez la couleur pour correspondre au footer */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal accidentel */
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none; /* take away underline (pas souligner les liens)*/
+  /*color: #000;*/
+}
+ul {
+  list-style: none; /* pour pas de bullet point*/
+}
+img {
+  max-width: 100%; /* stay contain 100%*/
+}
+.logo {
+  width: 120px;
+}
+
+/* #################################################################################### */
+/* ############################## Navigation bar ###################################### */
+/* #################################################################################### */
+/* Nav bar*/
+.navbar {
+  top: 0;
+  width: 100%;
+  background-color: var(--not-so-black-color);
+  padding: 20px 40px 20px 40px;
+  z-index: 1000;
+  position: fixed;
+}
+.navbar-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  align-items: center;
+}
+.navbar .main-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 370px;
+  max-height: 50px;
+}
+/* Updated Nav bar */
+.navbar .main-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ajustez cet espace selon vos préférences */
+  background-color: var(--dark-color);
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 8px 8px 8px 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.navbar .main-menu ul li {
+  text-align: center; /* Centre le texte dans chaque élément */
+}
+.navbar .main-menu ul li a {
+  padding: 15px 30px 15px 30px;
+  color: var(--font-couleur-2); /* Couleur du texte par défaut */
+  /*transition: all 0.4s ease-in-out;*/
+  position: relative;
+}
+/* Effet actif avec espace autour */
+.navbar .main-menu ul li a.active {
+  background-color: var(
+    --less-dark-color
+  ); /* Couleur de fond pour le bouton actif */
+  color: var(--font-couleur-1); /* Couleur du texte pour le bouton actif */
+  border-radius: 30px; /* Coins arrondis */
+  padding: 8px 25px; /* Réduit légèrement le padding pour créer un espace autour */
+  box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.4); /* Ombre douce */
+}
+.navbar .main-menu ul li a:not(.active):hover::before {
+  width: 96px; /* Largeur finale pour le hover */
+  height: 38px; /* Hauteur finale pour le hover */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9); /* Ombre pour l'effet */
+}
+/* Optional: For smoother scaling effect on hover */
+.navbar .main-menu ul li a:hover {
+  transform: scale(1.05); /* Échelle légèrement augmentée */
+  color: var(--font-couleur-3);
+  transition: all 0.3s ease-in-out; /* Transition pour le texte et la taille */
+}
+.navbar .link-icon-tab ul {
+  display: flex;
+  justify-content: flex-end; /* Aligne tous les icônes à droite */
+  gap: 25px; /* Espace entre les icônes */
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.navbar .link-icon-tab li {
+  display: inline-block;
+}
+.navbar .link-icon-tab a {
+  color: var(--light-color); /* Couleur par défaut des icônes */
+  font-size: 1.5rem; /* Taille des icônes */
+  transition: color 0.3s ease-in-out; /* Transition douce pour le hover */
+}
+.navbar .link-icon-tab a:hover {
+  color: var(--font-couleur-3); /* Change la couleur au survol */
+}
+
+/* #################################################################################### */
+/* ############################## Home Section ######################################## */
+/* #################################################################################### */
+/* Home */
+.home {
+  margin-top: 57px;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Hero */
+.hero {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 110px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 40%,
+      var(--dark-gray-color) 100%
+    ),
+    url("/assets/images/bg-bg.png") center/cover no-repeat fixed;
+  /*color: #ffffff;*/
+  height: 590px;
+}
+.hero .container {
+  background-size: contain;
+  background-position: center top;
+  height: 500px;
+}
+.hero .hero-heading {
+  color: var(--font-couleur-4);
+}
+.hero .hero-subheading {
+  color: var(--font-couleur-3);
+}
+.hero .hero-content {
+  width: 70%;
+}
+.hero .hero-text {
+  width: 75%;
+  margin-top: 20px;
+  color: var(--font-couleur-1);
+}
+.hero .hero-buttons {
+  margin-top: 25px;
+  padding-left: 190px;
+  color: var(--font-couleur-3);
+}
+.hero .address {
+  color: var(--font-light);
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+/* --------------------------------------------------------------------------------------------- */
+/* My services class */
+.my-services {
+  padding: 100px 0 70px 0;
+  background-color: var(--dark-gray-color);
+}
+.my-services .my-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.my-services .expertise-grid {
+  margin-top: 40px;
+}
+.my-services .service-icon img {
+  display: block;
+  opacity: 0.7;
+  padding-left: 10px;
+  height: 80px; /* Fixed height for all icons */
+  width: 80px; /* Fixed height for all icons */
+  object-fit: contain; /* Ensure icons fit without stretching */
+}
+.software-icons {
+  display: flex;
+  flex-direction: row;
+  width: auto; /* Fixed width for all icons */
+  height: 40px; /* Fixed height for all icons */
+  justify-content: space-evenly;
+}
+/* Style for the tag container */
+.my-services .tags {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Wraps tags to a new line if there's not enough space */
+  gap: 8px; /* Space between tags */
+}
+/* Individual tag style */
+.my-services .tag {
+  background-color: var(--bg-couleur-1); /* Background color for the tag */
+  color: var(--font-couleur-4); /* Text color for the tag */
+  padding: 5px 10px; /* Padding inside the tag */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color-2); /* Border color */
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* My work section */
+.sum-work {
+  background-color: var(--dark-gray-color);
+  padding: 40px;
+}
+/* Header section layout */
+.sum-work .sum-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 5px;
+}
+/* Conteneur pour le texte de titre et la phrase */
+.sum-work .header-text {
+  text-align: left;
+}
+.sum-work .sum-header-text h3 {
+  margin: 0;
+  font-weight: 500;
+  color: var(--font-couleur-1);
+}
+.sum-work .sum-header-text h4 {
+  margin-top: 5px;
+  font-weight: 400;
+  color: var(--font-couleur-1);
+}
+/* Layout for cards */
+.sum-work-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 60px;
+}
+.sum-work .work-card.card-1 {
+  background-image: url("/assets/images/Projet-8.PNG");
+}
+.sum-work .work-card.card-2 {
+  background-image: url("/assets/images/Projet-1.png");
+}
+.sum-work .work-card.card-3 {
+  background-image: url("/assets/images/Projet-2.png");
+}
+
+/* #################################################################################### */
+/* ############################# About Section ######################################## */
+/* #################################################################################### */
+/* ----- About Section ----- */
+.about-section h3 {
+  font-size: 2rem;
+  color: var(--font-couleur-4);
+  margin-bottom: 20px;
+}
+.about-section .about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-section .about-header h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--font-couleur-2);
+}
+.about-section h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--font-light);
+  padding-bottom: 20px;
+}
+.about-education,
+.about-experience,
+.about-skills,
+.about-certifs {
+  background-color: var(--dark-gray-color);
+}
+/* ---- About Intro ---*/
+.about-intro {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 130px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 40%,
+      var(--dark-gray-color) 100%
+    ),
+    url("/assets/images/bg-bg.png") center/cover no-repeat fixed;
+  /*color: #ffffff;*/
+  height: 590px;
+}
+.about-intro-content .section-title {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--font-couleur-1);
+  margin-bottom: 30px;
+}
+.about-intro-content .location {
+  margin-top: 20px;
+  color: var(--font-light);
+  font-size: 0.9rem;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+}
+.about-intro-content p {
+  color: var(--font-couleur-1);
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* ---- About Line ---*/
+.about-section .about-line {
+  width: 50%; /* Adjust width to control start and end margins */
+  height: 2px;
+  background-color: var(--border-color-2); /* Light grey color for line */
+  margin: 0 auto 30px auto; /* Centered with margin below */
+  border-radius: 1px;
+}
+/* ---- About Line 2 ---*/
+.about-section .about-line-2 {
+  width: 80%; /* Adjust width to control start and end margins */
+  height: 1px;
+  background-color: var(--border-color-3); /* Light grey color for line */
+  margin: 0 auto 30px auto; /* Centered with margin below */
+  border-radius: 1px;
+}
+/* ---- About Education ---*/
+.courses {
+  margin-top: 10px;
+}
+.courses-2 {
+  margin-top: 10px;
+  padding-bottom: 60px;
+}
+.courses-2 p {
+  color: var(--font-couleur-1);
+  padding-bottom: 10px;
+}
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  list-style-type: disc;
+  margin: 0;
+  padding: 0 15px;
+  padding-bottom: 40px;
+}
+.courses-list li {
+  color: var(--font-couleur-1);
+}
+
+/* ---- About Experience ---*/
+.work-experience-content .experience-list {
+  list-style-type: none;
+  padding: 0;
+}
+.tasks-list {
+  margin-top: 20px;
+  list-style-type: disc;
+  padding: 0 15px;
+  padding-bottom: 50px;
+}
+.tasks-list li {
+  color: var(--font-couleur-1);
+  padding-bottom: 15px;
+}
+
+/* ---- About Skills ---*/
+.about-skills .skills-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.about-skills .skill-item,
+.skill-item-2 {
+  display: inline-block;
+  padding: 8px 15px;
+  color: var(--font-couleur-1);
+  background-color: var(--very-dark-gray-color);
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+.about-skills .skill-item:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+  color: var(--font-couleur-3);
+}
+.about-skills .languages .skills-row {
+  padding-bottom: 60px;
+}
+
+/* Certifications */
+.certifs-links {
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: #ffffff; /* Blanc */
+  font-style: italic;
+  text-decoration: none;
+}
+.certifs-links:hover {
+  color: var(--font-couleur-3); /* Couleur différente au survol */
+  text-decoration: underline; /* Facultatif, souligne le lien au survol */
+}
+/* #################################################################################### */
+/* ############################## Work Section ######################################## */
+/* #################################################################################### */
+/* ----- Work Section ----- */
+/* Work section Header */
+.work {
+  margin-top: 57px;
+  width: 100%;
+}
+.work-hero {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 130px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 40%,
+      var(--dark-gray-color) 100%
+    ),
+    url("/assets/images/bg-bg.png") center/cover no-repeat fixed;
+  height: 590px;
+}
+.work-header h3 {
+  padding-top: 40px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--font-couleur-1);
+  margin-bottom: 20px;
+}
+.work-header h4 {
+  margin-top: 10px;
+  color: var(--font-light);
+  font-size: 1.4rem;
+  font-weight: 200;
+  text-align: center;
+}
+.work-header p {
+  color: var(--font-couleur-1);
+  margin-top: 60px;
+}
+/* Work section Body */
+.work-body-section {
+  background-color: var(--dark-gray-color);
+}
+/* Card grid layout */
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 40px;
+}
+/* Example background images */
+.work-cards .work-card.card-1 {
+  background-image: url("/assets/images/Projet-1.PNG");
+}
+.work-cards .work-card.card-2 {
+  background-image: url("/assets/images/Projet-2.png");
+}
+.work-cards .work-card.card-3 {
+  background-image: url("/assets/images/Projet-3.png");
+}
+.work-cards .work-card.card-4 {
+  background-image: url("/assets/images/Projet-4.png");
+}
+.work-cards .work-card.card-5 {
+  background-image: url("/assets/images/Projet-5.jpg");
+}
+.work-cards .work-card.card-6 {
+  background-image: url("/assets/images/Projet-6.png");
+}
+.work-cards .work-card.card-7 {
+  background-image: url("/assets/images/Projet-7.png");
+}
+.work-cards .work-card.card-8 {
+  background-image: url("/assets/images/Projet-8.png");
+}
+
+/* #################################################################################### */
+/* #################################### Footer ######################################## */
+/* #################################################################################### */
+/* Footer section styling */
+.footer {
+  padding: 80px 20px 5px 20px;
+  background-color: var(
+    --dark-gray-color
+  ); /* Adjust background color if needed */
+  color: var(--font-couleur-4);
+  text-align: center;
+}
+.footer .footer-line {
+  width: 90%; /* Adjust width to control start and end margins */
+  height: 2px;
+  background-color: var(--border-color-2); /* Light grey color for line */
+  margin: 0 auto 30px auto; /* Centered with margin below */
+  border-radius: 1px;
+}
+/* Footer text styling */
+.footer .footer-text {
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+/* Footer icon section */
+.footer .link-icon-tab ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+.footer .link-icon-tab a {
+  font-size: 1.8rem;
+  color: #ffffff; /* Icons in white */
+  transition: color 0.3s ease;
+}
+.footer .link-icon-tab a:hover {
+  color: var(--font-couleur-3); /* Change color on hover */
+}
+/* Copyright section */
+.footer .footer-copyright {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #9898a2; /* Light grey for subtlety */
+  margin-top: 60px;
+  bottom: 5px;
+}
+
+/* #################################################################################### */
+/* ############################### Utility Classes #################################### */
+/* #################################################################################### */
+/* Container classes*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 30px; /* top and bottom 0 but left and right be 15px*/
+}
+.container-sm {
+  max-width: 1000px;
+  margin: 0 auto; /* top and bottom 0 but left and right be auto in middle*/
+  padding: 0 15px; /* top and bottom 0 but left and right be 15px*/
+}
+/* ------------------------------------------------ */
+/* Card */
+.card {
+  position: relative;
+  background: var(--very-dark-gray-color);
+  color: var(--font-couleur-4);
+  border-radius: 15px;
+  padding: 25px;
+}
+.card h3 {
+  margin-top: 10px;
+  padding-left: 10px;
+  /*text-align: center;*/
+  line-height: 1.4;
+  min-height: 60px; /* Ensure consistent height for titles */
+}
+.card p {
+  flex-grow: 1; /* Make paragraph take up available space */
+  margin-bottom: 90px; /* Space for Learn More */
+  padding-left: 10px;
+  padding-right: 10px;
+  /*text-align: center;*/
+}
+/* Individual work card style */
+.work-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  min-height: 200px;
+  padding: 20px;
+  color: var(--font-light);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.work-card:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+  cursor: pointer;
+}
+/* Title inside the card */
+.work-card .work-card-title {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background-color: var(--very-dark-gray-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* ------------------------------------------------ */
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 23px;
+  background: var(--black-color);
+  color: var(--font-couleur-2);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+.btn:hover {
+  transform: scale(1.02); /* Échelle légèrement augmentée */
+  color: var(--font-couleur-3);
+  background: var(--font-couleur-1);
+  transition: ease-in-out 0.3s;
+}
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff; /*color of the text*/
+}
+.btn-block {
+  /*if we want the button to be all across the page*/
+  display: block;
+  width: 100%;
+}
+
+/* ------------------------------------------------ */
+/* Text Classes */
+.text-xxl {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+.text-xl {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 10px 0 20px;
+  color: #1d84b5;
+}
+.text-lg {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.text-md {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 20px 0 0px;
+}
+.text-md-2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.text-sm {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 10px 0 5px;
+}
+.text-icon {
+  font-size: 1.3rem;
+  color: var(--font-couleur-2);
+  line-height: 1.4;
+  font-weight: 600;
+  /*margin: 10px 0 20px;*/
+}
+.text-center {
+  text-align: center;
+}
+.text-italic-md {
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: var(--font-light);
+  font-style: italic;
+}
+.text-md-btn {
+  font-size: 1rem;
+  line-height: 2.2;
+  font-weight: 400;
+  margin: 20px 0 10px;
+  color: var(--font-couleur-1);
+}
+.bold-text {
+  color: var(--font-couleur-4);
+}
+.software-text {
+  color: var(--font-couleur-3);
+}
+/* ------------------------------------------------ */
+/* Affichage des pages */
+.section {
+  display: none; /* Cache toutes les sections principales par défaut */
+}
+.active-section {
+  display: block; /* Affiche uniquement la section principale active */
+}
+
+/* #################################################################################### */
+/* ############################### Mobile Section ##################################### */
+/* #################################################################################### */
+/* ------------------------------------------------ */
+/* Hamburger Button*/
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+  position: absolute; /* Assure que le bouton est positionné indépendamment */
+  right: 20px; /* Positionne le bouton à droite de l'écran */
+  top: 20px; /* Aligne le bouton en hauteur avec le contenu de la navbar */
+}
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: var(--light-color);
+  margin: 6px 0;
+}
+
+/* ------------------------------------------------ */
+/* Mobile menu*/
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: var(--dark-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+.mobile-menu.active {
+  right: 0;
+}
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+
+  padding: 0;
+  text-align: left;
+}
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+.mobile-menu ul li a {
+  font-size: 20px;
+  transition: 0.3s;
+  color: var(--font-couleur-4);
+  padding: 10px 20px;
+  display: block; /* Affichage en bloc pour remplir toute la largeur */
+  text-decoration: none;
+}
+.mobile-menu ul li a:hover {
+  background-color: var(
+    --light-color
+  ); /* Fond pour le survol dans le menu mobile */
+  color: var(--dark-color); /* Couleur du texte au survol */
+}
+/* ------------------------------------------------ */
+/* Media Queries*/
+/* allow to add specifics CSS to specifics devices or different ranges of screen sizes*/
+
+/*only show below the specified width */
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 670px) {
+  /* ############################## */
+  /* ############ Navbar ########## */
+  /* ############################## */
+  .navbar .main-menu {
+    display: none;
+  }
+  .navbar .link-icon-tab {
+    display: none;
+  }
+  .navbar .hamburger-button {
+    display: block;
+  }
+
+  /* ############################## */
+  /* ############ Hero ########## */
+  /* ############################## */
+  .hero,
+  .work-hero,
+  .about-intro,
+  .sum-work {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero .container {
+    background-size: 350px;
+    background-position: bottom;
+    height: 770px;
+  }
+  .hero .hero-content,
+  .hero .hero-text {
+    width: 100%;
+    text-align: left;
+  }
+  .hero .hero-buttons .btn {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+  .hero .hero-buttons {
+    margin-top: 50px;
+    padding-left: 0px;
+  }
+  /* ############################## */
+  /* ############ Services ########## */
+  /* ############################## */
+  .my-services .my-services-grid {
+    grid-template-columns: 1fr;
+  }
+  .my-services .service-icon img {
+    height: 60px; /* Fixed height for all icons */
+    width: 60px; /* Fixed height for all icons */
+  }
+  .my-services .my-services-row-3 .card {
+    height: 200px;
+  }
+  .my-services .software-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .software-icons img {
+    margin-top: 10px;
+    height: 35px;
+  }
+  /* ############################## */
+  /* ############ Work ########## */
+  /* ############################## */
+  .work-hero {
+    height: 100%;
+    padding-bottom: 10px;
+  }
+  .work-body-section {
+    padding-top: 60px;
+  }
+  .work-cards {
+    display: grid;
+    grid-template-columns: 1fr; /* Two columns */
+    gap: 40px;
+  }
+  .work-body-section .work-card .work-card-title {
+    font-size: 0.9rem;
+  }
+
+  /* ############################## */
+  /* ############ About ########## */
+  /* ############################## */
+  .about-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .about-section .about-header h4 {
+    font-size: 1.1rem;
+  }
+  .about-section h5 {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  .about-intro {
+    height: 100%;
+  }
+  .courses-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  /* ########@####### Text */
+  .text-xxl {
+    font-size: 1.8rem;
+  }
+
+  .text-xl {
+    font-size: 1.5rem;
+  }
+  .text-lg {
+    font-size: 1.1rem;
+  }
+  .text-md {
+    font-size: 1rem;
+  }
+  .text-md-2 {
+    font-size: 0.9rem;
+  }
+  .text-italic-md {
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+  /* ############################## */
+  /* ############ Footer ########## */
+  /* ############################## */
+  .footer .footer-text {
+    font-size: 1.3rem;
+  }
+  .btn {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  /* cartes */
+  .card p {
+    margin-bottom: 50px; /* Space for Learn More */
+  }
+  .container-sm {
+    padding: 0 7px; /* top and bottom 0 but left and right be 15px*/
+  }
+  .about-section .about-header {
+    display: block;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-xxl {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    height: 650px;
+  }
+  .my-services {
+    padding-top: 20px;
+  }
+  .software-icons img {
+    margin-top: 10px;
+    height: 25px;
+  }
+  .text-lg {
+    font-size: 1rem;
+  }
+  .text-md {
+    font-size: 0.9rem;
+  }
+}
