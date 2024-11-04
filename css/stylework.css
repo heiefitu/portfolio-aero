@@ -168,7 +168,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg01.png") center/cover no-repeat fixed;
+    url("../assets/images/bg01.png") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-2 {
@@ -177,7 +177,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg02.jpeg") center/cover no-repeat fixed;
+    url("../assets/images/bg02.jpeg") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-3 {
@@ -186,7 +186,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg03.png") center/cover no-repeat fixed;
+    url("../assets/images/bg03.png") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-4 {
@@ -195,7 +195,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg04.png") center/cover no-repeat fixed;
+    url("../assets/images/bg04.png") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-5 {
@@ -204,7 +204,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg05.jpg") center/cover no-repeat fixed;
+    url("../assets/images/bg05.jpg") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-6 {
@@ -213,7 +213,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg06.jpg") center/cover no-repeat fixed;
+    url("../assets/images/bg06.jpg") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-7 {
@@ -222,7 +222,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg07.png") center/cover no-repeat fixed;
+    url("../assets/images/bg07.png") center/cover no-repeat fixed;
   height: 590px;
 }
 .project-8 {
@@ -231,7 +231,7 @@ img {
       rgba(0, 0, 0, 0) 10%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg08.png") center/cover no-repeat fixed;
+    url("../assets/images/bg08.png") center/cover no-repeat fixed;
   height: 590px;
 }
 /* --------------------------------------------------------------------------------------------- */

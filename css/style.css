@@ -169,7 +169,7 @@ img {
       rgba(0, 0, 0, 0) 40%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg-bg.png") center/cover no-repeat fixed;
+    url("../assets/images/bg-bg.png") center/cover no-repeat fixed;
   /*color: #ffffff;*/
   height: 590px;
 }
@@ -291,10 +291,10 @@ img {
   background-image: url("/assets/images/Projet-8.PNG");
 }
 .sum-work .work-card.card-2 {
-  background-image: url("/assets/images/Projet-1.png");
+  background-image: url("../assets/images/Projet-1.png");
 }
 .sum-work .work-card.card-3 {
-  background-image: url("/assets/images/Projet-2.png");
+  background-image: url("../assets/images/Projet-2.png");
 }
 
 /* #################################################################################### */
@@ -338,7 +338,7 @@ img {
       rgba(0, 0, 0, 0) 40%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg-bg.png") center/cover no-repeat fixed;
+    url("../assets/images/bg-bg.png") center/cover no-repeat fixed;
   /*color: #ffffff;*/
   height: 590px;
 }
@@ -476,7 +476,7 @@ img {
       rgba(0, 0, 0, 0) 40%,
       var(--dark-gray-color) 100%
     ),
-    url("/assets/images/bg-bg.png") center/cover no-repeat fixed;
+    url("../assets/images/bg-bg.png") center/cover no-repeat fixed;
   height: 590px;
 }
 .work-header h3 {
@@ -510,28 +510,28 @@ img {
 }
 /* Example background images */
 .work-cards .work-card.card-1 {
-  background-image: url("/assets/images/Projet-1.PNG");
+  background-image: url("../assets/images/Projet-1.PNG");
 }
 .work-cards .work-card.card-2 {
-  background-image: url("/assets/images/Projet-2.png");
+  background-image: url("../assets/images/Projet-2.png");
 }
 .work-cards .work-card.card-3 {
-  background-image: url("/assets/images/Projet-3.png");
+  background-image: url("../assets/images/Projet-3.png");
 }
 .work-cards .work-card.card-4 {
-  background-image: url("/assets/images/Projet-4.png");
+  background-image: url("../assets/images/Projet-4.png");
 }
 .work-cards .work-card.card-5 {
-  background-image: url("/assets/images/Projet-5.jpg");
+  background-image: url("../assets/images/Projet-5.jpg");
 }
 .work-cards .work-card.card-6 {
-  background-image: url("/assets/images/Projet-6.png");
+  background-image: url("../assets/images/Projet-6.png");
 }
 .work-cards .work-card.card-7 {
-  background-image: url("/assets/images/Projet-7.png");
+  background-image: url("../assets/images/Projet-7.png");
 }
 .work-cards .work-card.card-8 {
-  background-image: url("/assets/images/Projet-8.png");
+  background-image: url("../assets/images/Projet-8.png");
 }
 
 /* #################################################################################### */
