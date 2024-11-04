@@ -298,28 +298,28 @@ img {
   right: 10px;
 }
 .carousel-track .work-card.card-1 {
-  background-image: url("/assets/images/Projet-1.PNG");
+  background-image: url("../assets/images/Projet-1.PNG");
 }
 .carousel-track .work-card.card-2 {
-  background-image: url("/assets/images/Projet-2.png");
+  background-image: url("../assets/images/Projet-2.png");
 }
 .carousel-track .work-card.card-3 {
-  background-image: url("/assets/images/Projet-3.png");
+  background-image: url("../assets/images/Projet-3.png");
 }
 .carousel-track .work-card.card-4 {
-  background-image: url("/assets/images/Projet-4.png");
+  background-image: url("../assets/images/Projet-4.png");
 }
 .carousel-track .work-card.card-5 {
-  background-image: url("/assets/images/Projet-5.jpg");
+  background-image: url("../assets/images/Projet-5.jpg");
 }
 .carousel-track .work-card.card-6 {
-  background-image: url("/assets/images/Projet-6.png");
+  background-image: url("../assets/images/Projet-6.png");
 }
 .carousel-track .work-card.card-7 {
-  background-image: url("/assets/images/Projet-7.png");
+  background-image: url("../assets/images/Projet-7.png");
 }
 .carousel-track .work-card.card-8 {
-  background-image: url("/assets/images/Projet-8.png");
+  background-image: url("../assets/images/Projet-8.png");
 }
 
 /* #################################################################################### */
