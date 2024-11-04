@@ -131,6 +131,7 @@ img {
 /* Body */
 .project-body {
   background-color: var(--dark-gray-color);
+  padding-top: 30px;
 }
 .project-body h3 {
   color: var(--font-couleur-3);
